@@ -1,0 +1,36 @@
+#+title: My Custom Config
+#+author: Harsh Vyapari (harshv5094)
+#+date: <2024-10-25 Fri>
+#+startup: showeverything
+
+* Table Of Contents :toc:
+- [[#basic-configuration][Basic Configuration]]
+  - [[#doom-theme][Doom theme]]
+  - [[#font-family][Font Family]]
+  - [[#relative-line-number][Relative Line Number]]
+- [[#org-settings][Org Settings]]
+  - [[#setting-org-directory][Setting org directory]]
+
+* Basic Configuration
+
+** Doom theme
+#+begin_src emacs-lisp
+(setq doom-theme 'doom-one)
+#+end_src
+
+** Font Family
+#+begin_src emacs-lisp
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 13 :weight 'regular))
+#+end_src
+
+** Relative Line Number
+#+begin_src emacs-lisp
+(setq display-line-numbers-type 'relative)
+#+end_src
+
+* Org Settings
+
+** Setting org directory
+#+begin_src emacs-lisp
+(setq org-directory "~/org/")
+#+end_src
