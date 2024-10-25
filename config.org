@@ -5,6 +5,7 @@
 
 * Table Of Contents :toc:
 - [[#basic-configuration][Basic Configuration]]
+  - [[#beacon-mode][Beacon Mode]]
   - [[#doom-theme][Doom theme]]
   - [[#font-family][Font Family]]
   - [[#relative-line-number][Relative Line Number]]
@@ -13,17 +14,26 @@
 
 * Basic Configuration
 
+** Beacon Mode
+To find cursor anywhere
+#+begin_src emacs-lisp
+(beacon-mode 1)
+#+end_src
+
 ** Doom theme
+Setting default theme
 #+begin_src emacs-lisp
 (setq doom-theme 'doom-one)
 #+end_src
 
 ** Font Family
+Setting default font
 #+begin_src emacs-lisp
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 13 :weight 'regular))
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 15 :weight 'regular))
 #+end_src
 
 ** Relative Line Number
+Enable relative line number
 #+begin_src emacs-lisp
 (setq display-line-numbers-type 'relative)
 #+end_src
@@ -31,6 +41,7 @@
 * Org Settings
 
 ** Setting org directory
+Setting org directory default path
 #+begin_src emacs-lisp
 (setq org-directory "~/org/")
 #+end_src
