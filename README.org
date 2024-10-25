@@ -1,6 +1,4 @@
-#+title: README TITLE
+#+title: Doom Emacs Custom Configuration
 #+author: Harsh Vyapari
-
-* Custom Doom Emacs Configuration
 
 this is my custom doom emacs config
