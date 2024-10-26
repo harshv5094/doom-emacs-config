@@ -25,7 +25,7 @@ To find cursor anywhere
 ** Doom theme
 Setting default theme
 #+begin_src emacs-lisp
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-tokyo-night)
 #+end_src
 
 ** Font Family
