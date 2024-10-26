@@ -9,8 +9,10 @@
   - [[#doom-theme][Doom theme]]
   - [[#font-family][Font Family]]
   - [[#relative-line-number][Relative Line Number]]
-- [[#org-settings][Org Settings]]
-  - [[#setting-org-directory][Setting org directory]]
+- [[#org-mode-settings][Org Mode Settings]]
+  - [[#org-auto-tangle][Org auto tangle]]
+  - [[#org-directory][Org directory]]
+  - [[#org-roam-directory][Org roam directory]]
 
 * Basic Configuration
 
@@ -38,10 +40,36 @@ Enable relative line number
 (setq display-line-numbers-type 'relative)
 #+end_src
 
-* Org Settings
+* Org Mode Settings
 
-** Setting org directory
+** Org auto tangle
+~org-auto-tangle~ allows you to add the option ~#+auto_tangle: t~ in your Org file so that it automatically tangles when you save the document.
+#+begin_src emacs-lisp
+(use-package! org-auto-tangle
+  :defer t
+  :hook (org-mode . org-auto-tangle-mode)
+  :config
+  (setq org-auto-tangle-default t))
+
+(defun hv/insert-auto-tangle-tag ()
+  "Insert auto-tangle in literate config."
+  (interactive)
+  (evil-org-open-below 1)
+  (insert "#+auto_tangle: t")
+  (evil-force-normal-state))
+
+(map! :leader
+      :desc "Insert auto_tangle tag" "i a" #'hv/insert-auto-tangle-tag)
+#+end_src
+
+** Org directory
 Setting org directory default path
 #+begin_src emacs-lisp
 (setq org-directory "~/org/")
+#+end_src
+
+** Org roam directory
+Setting up org roam directory default path
+#+begin_src emacs-lisp
+(setq org-roam-directory "~/org/roam/")
 #+end_src

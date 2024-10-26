@@ -51,3 +51,6 @@
 
 (package! all-the-icons)
 (package! beacon)
+(package! evil-tutor)
+(package! tldr)
+(package! minimap)
